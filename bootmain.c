@@ -70,6 +70,17 @@ readsect(void *dst, uint offset)
 
   // Read data.
   waitdisk();
+
+  // why is insl passed sectsize/4 as argument and not sectsize
+  // if we are going to read the whole sector?
+  // Answer: The insl function actually reads the data from the
+  // disk controller and brings it to memory.
+  // remember that the data bus is of size 32 bits (4bytes), 
+  // through which data is brought into memory from i/o or cpu
+  // The Third arguement in insl is the count so that you can 
+  // command how many times should the rep instruction run to
+  // read and bring 4 bytes of memory from the i/o.
+
   insl(0x1F0, dst, SECTSIZE/4);
 }
 

@@ -1,0 +1,33 @@
+{
+    "files.associations": {
+        "syscall.h": "c",
+        "param.h": "c",
+        "types.h": "c",
+        "defs.h": "c",
+        "proc.h": "c",
+        "x86.h": "c",
+        "array": "c",
+        "*.tcc": "c",
+        "cmath": "c",
+        "deque": "c",
+        "string": "c",
+        "unordered_map": "c",
+        "vector": "c",
+        "exception": "c",
+        "functional": "c",
+        "string_view": "c",
+        "memory": "c",
+        "random": "c",
+        "format": "c",
+        "initializer_list": "c",
+        "numeric": "c",
+        "ostream": "c",
+        "span": "c",
+        "streambuf": "c",
+        "utility": "c",
+        "text_encoding": "c",
+        "thread": "c",
+        "unistd.h": "c",
+        "stat.h": "c"
+    }
+}

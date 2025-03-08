@@ -79,6 +79,10 @@ kfree(char *v)
 // Allocate one 4096-byte page of physical memory.
 // Returns a pointer that the kernel can use.
 // Returns 0 if the memory cannot be allocated.
+
+
+// All it does is it returns the 0pointer to page from the pool of kmem.freelist and removes from 
+// kmem.freelist
 char*
 kalloc(void)
 {
