@@ -10,6 +10,17 @@ static void startothers(void);
 static void mpmain(void)  __attribute__((noreturn));
 extern pde_t *kpgdir;
 extern char end[]; // first address after kernel loaded from ELF file
+/*
+  Question: Where does this end came from since it's type is extern?
+  Answer: 
+    * Since it is extern this will be declared somewhere in the file.
+    * In lecture sir said this end is the address where the kernel ends
+    * It's the address where the code segement of part of the kernel ends
+    * from there we are going to initialize the page
+    * But where is the end defined?
+    * It's provided by kernel.ld(instruction given to the linker)
+    * PROVIDE(end = .);
+*/
 
 // Bootstrap processor starts running C code here.
 // Allocate a real stack and switch to it, first

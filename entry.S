@@ -56,6 +56,8 @@ entry:
   movl    %eax, %cr0
 
   # Set up the stack pointer.
+  # stack = 0x801144d0 
+  # esp is set to 0x801154d0
   movl $(stack + KSTACKSIZE), %esp
 
   # Jump to main(), and switch to executing at
@@ -64,5 +66,5 @@ entry:
   # for a direct jump.
   mov $main, %eax
   jmp *%eax
-
+  # this are set as undefined global variables
 .comm stack, KSTACKSIZE
